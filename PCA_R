@@ -11,7 +11,7 @@ setwd(path)
 data_core = read.csv("Core_Genome_All.csv")  #For Accessory genome, change this file for Accessory_Genome_All.csv
 host = read.csv("Saureus_host.csv")  #For evaluate by ST instead of host, change this file for Saureus_host.csv
 
-#First few steps are data formating. 
+#Formatting the data
 binary_data <- data_core[,15:451]
 binary_data[binary_data == ""] <- NA
 binary_data[!is.na(binary_data)] <- "1"
